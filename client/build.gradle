@@ -1,0 +1,7 @@
+dependencies {
+    // Netty for network communication
+    implementation 'io.netty:netty-all:4.1.100.Final'
+    
+    // Dependency on the API module
+    implementation project(':api')
+}

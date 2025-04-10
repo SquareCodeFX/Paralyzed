@@ -1,0 +1,6 @@
+rootProject.name = 'Paralyzed'
+
+include 'api'
+include 'server'
+include 'client'
+include 'examples'

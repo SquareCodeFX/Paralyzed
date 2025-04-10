@@ -1,0 +1,33 @@
+dependencies {
+    // Netty for network communication
+    implementation 'io.netty:netty-all:4.1.100.Final'
+    
+    // Dependencies on the API, server, and client modules
+    implementation project(':api')
+    implementation project(':server')
+    implementation project(':client')
+}
+
+// Task to run the SimpleServerExample
+task runServer(type: JavaExec) {
+    group = 'examples'
+    description = 'Runs the SimpleServerExample'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'de.feelix.ocean.examples.SimpleServerExample'
+}
+
+// Task to run the SimpleClientExample
+task runClient(type: JavaExec) {
+    group = 'examples'
+    description = 'Runs the SimpleClientExample'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'de.feelix.ocean.examples.SimpleClientExample'
+}
+
+// Task to run the CustomPacketExample
+task runCustomPacket(type: JavaExec) {
+    group = 'examples'
+    description = 'Runs the CustomPacketExample'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'de.feelix.ocean.examples.CustomPacketExample'
+}
